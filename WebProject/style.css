@@ -1,27 +1,33 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
 body {
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #263343;
+  background-color: var(--background-color);
   padding: 8px 12px;
 }
 
 .navbar_logo {
   font-size: 24px;
-  color: white;
+  color: var(--text-color);
 }
 
 .navbar_logo i {
-  color: #d49466;
+  color: var(--accent-color);
 }
 
 .navbar_menu {
@@ -31,7 +37,7 @@ a {
 }
 
 .navbar_menu li:hover {
-  background-color: yellowgreen;
+  background-color: var(--accent-color);
   border-radius: 4px;
 }
 
@@ -41,7 +47,7 @@ a {
 
 .navbar_icon {
   list-style: none;
-  color: white;
+  color: var(--text-color);
   display: flex;
   padding-left: 0;
 }
@@ -55,7 +61,7 @@ a {
   position: absolute;
   right: 32px;
   font-size: 24px;
-  color: #d49466;
+  color: var(--accent-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -65,11 +71,13 @@ a {
     padding: 8px 24px;
   }
   .navbar_menu {
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
   .navbar_icon {
+    display: none;
     justify-content: center;
     width: 100%;
   }
@@ -81,5 +89,10 @@ a {
 
   .navbar_toggle {
     display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_icon.active {
+    display: flex;
   }
 }
