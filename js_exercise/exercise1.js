@@ -17,7 +17,7 @@ const person={name:'sooing',age:20};
 console.log(person);
 // {name: 'sooing', age:20} 출력
 
-console.log('이름은 '+person.name+' 나이는'+person.age+'입니다.');
+console.log('이름은 '+person.name+' 나이는 '+person.age+'입니다.');
 // 일반적인 출력
 
 console.log(`이름은 ${person.name} 나이는 ${person.age}입니다.`);
@@ -45,7 +45,7 @@ console.log(person1 == person2);
 console.log(person1 === person2);
 //이 또한 참조가 다르기 때문에 false
 
-connsole.log(person1 === person3);
+console.log(person1 === person3);
 //참조가 같기 때문에 true
 
 function showMessage(message, from= 'unknown'){
@@ -121,8 +121,10 @@ randomQuiz('love',printYes,printNo);
 // yes 출력
 
 // 기존에 함수를 만들었던 방법
+{
 const simplePrint = function() {
     console.log('print');
+}
 }
 
 // Arrow Function 1
@@ -142,7 +144,7 @@ const simpleMulti = (a,b) => {
 })();
 
 // 함수 선언과 동시에 호출
-
+{
 class Person{
 
     constructor(name,age){
@@ -158,12 +160,13 @@ const person = new Person('sooing',20);
 console.log(person.name);
 console.log(person.age);
 person.speak();
-
+}
 // sooing
 // 20
 // Hi
 // 출력
 
+{
 class Person{
 
     constructor(fName,lName,age){
@@ -181,8 +184,8 @@ class Person{
         this._age=val;
     }
 }
-
-const person = new Person('soo','ing',-1);
+const person = new Person('soo','ing',1);
+}
 
 // age가 0보다 작으면 에러메시지가 나오도록 설정하였기 때문에 에러 메시지 출력
 
@@ -196,13 +199,16 @@ console.log(num.publicField); // 2 출력
 console.log(num.privateField); // undefined 출력
 
 // static 사용하지 않은 경우
+{
 class Name{
     person='sooing';
 }
 const a1=new Name();
 console.log(a1.person);
+}
 
 // static 사용한 경우
+{
 class Name{
     static person='sooing';
   
@@ -212,6 +218,7 @@ class Name{
 }
 console.log(Name.person);
 Name.print();
+}
 
 class Shape{
     constructor(width, height, color){
