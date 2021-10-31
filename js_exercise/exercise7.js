@@ -65,25 +65,24 @@ console.log(obj3);
 const num1=[1,2];
 const num2=[3,4];
 const number=[...num1,...num2];
-console.log(number);
+console.log(number); //[1, 2, 3, 4] 출력
+
 }
 // 오브젝트 덮어씌우기도 가능
 const num1={num:1};
 const num2={num:2};
-const num={...num1,...num2};
+const num={...num1,...num2}; // 가장 마지막 값으로 덮어씌움
 console.log(num);
 
 // Default Parameters
-
 function printMessage(message='default message'){
     console.log(message);
 }
 
-printMessage('hello');
-printMessage();
+printMessage('hello'); // hello
+printMessage(); // default message
 
 // Ternary Operator
-
 const isCat= true;
 const component=isCat? '1':'2';
 console.log(component);
@@ -102,6 +101,8 @@ const person1={
 const person2={
     name:'bob'
 }
+
+// 일반적인 표현
 /*
 function printManager(person){
     console.log(
@@ -114,6 +115,7 @@ function printManager(person){
 }
 */
 
+// 간결하게 표현
 function printManager(person){
     console.log(person.job?.manager?.name);
 }
